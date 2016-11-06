@@ -14,15 +14,18 @@ const cli = meow(`
 	Options
 	  -f, --file [file]  Path to property list. (Default: Safari Reading List)
 	  -t, --token [token]  Pinboard API token (Default: PINBOARD_API_TOKEN)
+	  -k, --keep-items  Should list items be kept instead of being removed.
 `, {
 	alias: {
 		f: 'file',
 		t: 'token',
+		k: 'keep-items',
 		h: 'help',
 		v: 'version'
 	},
 	'default': {
-		token: process.env.PINBOARD_API_TOKEN
+		token: process.env.PINBOARD_API_TOKEN,
+		'keep-items': false
 	}
 });
 
@@ -34,7 +37,7 @@ spinner.start();
 
 syncList(Object.assign({
 	apiToken: cli.flags.token,
-	clearList: false
+	clearList: !cli.flags.keepItems
 }, config))
 	.then(( res ) => {
 		const count = res.length;

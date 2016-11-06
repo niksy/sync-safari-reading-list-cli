@@ -4,6 +4,8 @@
 
 Sync Safari Reading List to Pinboard bookmarking service.
 
+This module is primarily useful for syncing default Safari Reading List bookmarks so there are some sensible defaults like automatic clearing of list after syncing.
+
 ## Install
 
 ```sh
@@ -23,6 +25,7 @@ sync-safari-reading-list
   Options
     -f, --file [file]  Path to property list. (Default: Safari Reading List)
     -t, --token [token]  Pinboard API token (Default: PINBOARD_API_TOKEN)
+    -k, --keep-items  Should list items be kept instead of being removed.
 ```
 
 ## License
