@@ -1,0 +1,48 @@
+{
+  "name": "sync-safari-reading-list-cli",
+  "version": "0.0.0",
+  "description": "Sync Safari Reading List to Pinboard bookmarking service.",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
+  "license": "MIT",
+  "bin": {
+    "sync-safari-reading-list": "cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint '{index,test/**/*}.js' && mocha 'test/**/*.js'"
+  },
+  "dependencies": {
+    "meow": "^3.7.0",
+    "ora": "^0.3.0",
+    "sync-safari-reading-list": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-niksy": "^3.0.1",
+    "execa": "^0.5.0",
+    "mocha": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "bookmarks",
+    "cli",
+    "cli-app",
+    "list",
+    "pinboard",
+    "reading",
+    "safari",
+    "sync"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/sync-safari-reading-list-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/sync-safari-reading-list-cli/issues"
+  },
+  "homepage": "https://github.com/niksy/sync-safari-reading-list-cli#readme"
+}
