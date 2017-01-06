@@ -15,17 +15,20 @@ const cli = meow(`
 	  -f, --file [file]  Path to property list. (Default: Safari Reading List)
 	  -t, --token [token]  Pinboard API token (Default: PINBOARD_API_TOKEN)
 	  -k, --keep-items  Should list items be kept instead of being removed.
+	  -u, --keep-original-urls  Should original URLs be preserved (i.e. don’t resolve redirects or strip mobile and UTM parts)
 `, {
 	alias: {
 		f: 'file',
 		t: 'token',
 		k: 'keep-items',
+		u: 'keep-original-urls',
 		h: 'help',
 		v: 'version'
 	},
 	'default': {
 		token: process.env.PINBOARD_API_TOKEN,
-		'keep-items': false
+		'keep-items': false,
+		'keep-original-urls': false
 	}
 });
 
@@ -37,7 +40,8 @@ spinner.start();
 
 syncList(Object.assign({
 	apiToken: cli.flags.token,
-	clearList: !cli.flags.keepItems
+	clearList: !cli.flags.keepItems,
+	cleanUrls: !cli.flags.keepOriginalUrls
 }, config))
 	.then(( res ) => {
 		const count = res.length;

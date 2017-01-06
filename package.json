@@ -16,7 +16,7 @@
   "dependencies": {
     "meow": "^3.7.0",
     "ora": "^0.3.0",
-    "sync-safari-reading-list": "^1.1.0"
+    "sync-safari-reading-list": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.1.1",

@@ -28,6 +28,10 @@ sync-safari-reading-list
     -k, --keep-items  Should list items be kept instead of being removed.
 ```
 
+## Related
+
+* [sync-safari-reading-list][sync-safari-reading-list] - API for this module
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
