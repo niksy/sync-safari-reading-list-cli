@@ -26,6 +26,7 @@ sync-safari-reading-list
     -f, --file [file]  Path to property list. (Default: Safari Reading List)
     -t, --token [token]  Pinboard API token (Default: PINBOARD_API_TOKEN)
     -k, --keep-items  Should list items be kept instead of being removed.
+    -u, --keep-original-urls  Should original URLs be preserved (i.e. don’t resolve redirects or strip mobile and UTM parts)
 ```
 
 ## Related
